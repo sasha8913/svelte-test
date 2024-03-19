@@ -1,4 +1,6 @@
-
+<svelte:head>
+    <title>Блог</title>
+</svelte:head>
 
 <div class='container'>
     <h1>Мои статьи</h1>

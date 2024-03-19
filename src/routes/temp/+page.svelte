@@ -1,6 +1,6 @@
-<head>
+<svelte:head>
     <title>temp</title>
-</head>
+</svelte:head>
 
 <div class='container'>
     <h1>temp</h1>

@@ -1,6 +1,6 @@
-<head>
+<svelte:head>
     <title>Обо мне</title>
-</head>
+</svelte:head>
 
 <div class="container">
     <h1>Обо мне</h1>
