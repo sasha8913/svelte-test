@@ -1,4 +1,5 @@
 <script>
+    import Icon from "../../../../components/Icon.svelte";
     let newItem = "";
     let todoList = [];
 
@@ -7,17 +8,16 @@
             todoList = [
                 ...todoList,
                 {
-                    задача: newItem,
-                    завершено: false,
+                    task: newItem,
+                    completed: false,
                 },
             ];
             newItem = "";
         }
     }
-    import Icon from "../../../../components/Icon.svelte";
     function remove(index) {
         todoList.splice(index, 1);
-        todoList = [...todoList];
+        todoList = todoList;
     }
     function complete(index) {
         todoList[index].completed = !todoList[index].completed;
@@ -36,7 +36,7 @@
         {#each todoList as item, index}
             <div class="todo" class:completed={item.completed}>
                 <span class="todo_text">{item.task}</span>
-                <div class="todo_buttons">
+                <div class="todo__buttons">
                     <button class="complete" on:click={() => complete(index)}>
                         <Icon name="check-mark" />
                     </button>
@@ -50,11 +50,11 @@
 </main>
 
 <style>
-    todo {
+    .todo {
         display: flex;
         padding: 20px;
         border-radius: 20px;
-        box-shadow: 0 15px rgb(0, 0, 0 / 20%);
+        box-shadow: 0 0 15px rgb(0, 0, 0, 0.2);
         background-color: hsla(0, 0%, 100%, 0.2);
         margin-top: 1rem;
         font-size: 1.2rem;
@@ -68,12 +68,13 @@
         margin-left: 1rem;
     }
 
-    todo button {
+    .todo button {
         width: 32px;
         height: 32px;
         padding: 4px;
         margin: 0;
         flex-shrink: 0;
+        cursor: pointer;
     }
 
     h1 {
@@ -111,6 +112,7 @@
         margin: 0;
         outline: none;
     }
+
     button {
         background-color: transparent;
         border: none;
@@ -127,18 +129,32 @@
         color: cadetblue;
         transition: color 100ms ease-out;
     }
+    .add-todo {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #000 !important;
+        margin-left: 16px;
+        cursor: pointer;
+    }
 
-    todo.completed {
+    .add-todo span {
+        font-size: 24px;
+        color: #333;
+    }
+
+    .completed {
         color: slategray;
     }
 
-    todo.completed .todo_text {
+    .completed .todo_text {
         text-decoration: line-through;
     }
 
-    todo.completed button {
+    .completed button {
         color: silver;
     }
+
     .todos {
         width: 100%;
         max-width: 500px;
