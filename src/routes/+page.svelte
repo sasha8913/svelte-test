@@ -49,10 +49,10 @@
         align-items: start;
     }
     .container {
-        max-width: 1400px;
-        margin: 190px 2.5rem;
+        max-width: 1280px;
+        margin: 0 auto;
     }
-    info h1 {
+    .info h1 {
         font-size: 4rem;
         margin: 0;
     }
@@ -75,7 +75,7 @@
         background-color: #ecebe8;
         width: 100%;
         height: 80vh;
-        margin: -380px auto;
+        margin: -163px auto;
     }
     .info .info-text {
         position: relative;

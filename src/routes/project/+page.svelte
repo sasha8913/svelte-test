@@ -6,15 +6,15 @@
     <title>Портфолио</title>
 </svelte:head>
 
-<div class='container'>
+<div class="container">
     <h1>Мои проекты</h1>
-    <div class='apps'>
+    <div class="apps">
         {#each routes as page}
-            <div class='app'>
+            <div class="app">
                 <h2>{page.title}</h2>
                 <p>{page.body}</p>
-                <p class='readmore'>
-                    <a class='link' href={`/project/apps/${page.id}`}>
+                <p class="readmore">
+                    <a class="link" href={`/project/apps/${page.id}`}>
                         Читать далее
                     </a>
                 </p>
@@ -37,9 +37,13 @@
     .app {
         border: 1px solid #ddd;
         padding: 10px;
-        box-shadow: 00 10px #eee;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #eee;
     }
     .link {
         color: rgb(10, 10, 139);
+        background: #ff9800;
+        padding: 10px;
+        border-radius: 10px;
     }
 </style>

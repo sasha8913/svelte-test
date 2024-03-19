@@ -1,6 +1,4 @@
-<head>
-    <title>Блог</title>
-</head>
+
 
 <div class='container'>
     <h1>Мои статьи</h1>
@@ -22,7 +20,7 @@
     .container {
         margin: 50px auto;
         max-width: 800px;
-        padding: 20px;
+        padding: 0 20px;
     }
     
     .blogposts {
@@ -36,9 +34,11 @@
         padding: 10px;
         box-shadow: 0 0 10px #eee;
     }
-    
     .link {
         color: rgb(10, 10, 139);
+        background: #ff9800;
+        padding: 10px;
+        border-radius: 10px;
     }
 </style>
 

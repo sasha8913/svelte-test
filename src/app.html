@@ -23,16 +23,18 @@
 		}
 
 		nav {
+			background: #ecebe8;
 			position: sticky;
 			top: 0;
 			left: 0;
 			right: 0;
-			margin: 80px 80px;
 			padding-top: 2rem;
 			padding-bottom: 2rem;
 		}
 
 		nav .nav-container {
+			max-width: 1200px;
+			margin: 0 auto;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -59,6 +61,72 @@
 			line-height: 1;
 			font-size: 1.1rem;
 			color: black;
+		}
+
+		.container {
+			max-width: 100%;
+			margin: 0 auto;
+		}
+
+		.info-text {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.animate-text-1 {
+			font-size: 24px;
+			color: #333;
+			font-weight: bold;
+		}
+
+		.text-2 {
+			font-size: 18px;
+			color: #666;
+		}
+
+		.subtitle {
+			font-size: 22px;
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		.scroll-button {
+			background-color: #FF9800;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			display: inline-block;
+			margin-top: 10px;
+			text-decoration: none;
+		}
+
+		.scroll-button:hover {
+			background-color: #555;
+		}
+
+		.arrow {
+			display: inline-block;
+			margin-left: 5px;
+		}
+
+		.background-div {
+			background-color: #f7f7f7;
+			height: 100px;
+		}
+
+		/* Additional styles for responsiveness */
+		@media screen and (max-width: 768px) {
+			.info-text {
+				padding: 0 10px;
+			}
+
+			.subtitle {
+				font-size: 18px;
+			}
+
+			.scroll-button {
+				padding: 8px 16px;
+			}
 		}
 	</style>
 	%sveltekit.head%
