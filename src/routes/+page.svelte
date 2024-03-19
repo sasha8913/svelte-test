@@ -74,8 +74,8 @@
     .background-div {
         background-color: #ecebe8;
         width: 100%;
-        height: 56vh;
-        margin: -205px auto;
+        height: 80vh;
+        margin: -380px auto;
     }
     .info .info-text {
         position: relative;
